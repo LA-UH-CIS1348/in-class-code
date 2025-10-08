@@ -1,0 +1,4 @@
+can you tell me the id of the pokemon that did the most damage,
+i need a bodyguard.
+you can use this file i found.
+combatlogwithids.txt

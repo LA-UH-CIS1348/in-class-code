@@ -1,0 +1,3 @@
+attacker:pikachu,defender:togepi,damage:5
+attacker:pikachu,defender:togepi,damage:15
+attacker:togepi,defender:pikachu,damage:150

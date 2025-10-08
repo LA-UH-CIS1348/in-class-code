@@ -1,0 +1,11 @@
+lists
+slicing
+conversions (int, str, char)
+searching lists
+looking up lists by index
+parsing lines
+reading files
+writing files
+split
+strip
+modulus

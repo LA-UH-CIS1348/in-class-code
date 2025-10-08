@@ -1,0 +1,23 @@
+original string:
+attacker:pikachu,defender:togepi,damage:5\n"
+
+split(',') result is a list:
+"attacker:pikachu" <- index 0
+"defender:togepi" <- index 1
+"damage:5\n" <- index 2
+
+result[0] -> "attacker:pikachu"
+result[1] -> "defender:togepi"
+result[2] -> "damage:5\n"
+
+lastresult = result[0].split(':') -> ["attacker", "pikachu"]
+lastresult[1] -> "pikachu"
+
+lastresult = result[1].split(':') -> ["defender", "togepi"]
+lastresult[1] -> "togepi"
+
+lastresult = result[2].split(':') -> ["damage", "5\n"]
+lastresult[1] -> "5\n"
+
+originalstring.split(',')[0].split(':')[1] -> "pikachu"
+
