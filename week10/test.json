@@ -1,28 +1,46 @@
 {
- "widget": {
-   "debug": "on",
-   "window": {
-     "title": "Sample Konfabulator Widget",
-     "name": "main_window",
-     "width": 500,
-     "height": 500
-   },
-   "image": {
-     "src": "Images/Sun.png",
-     "name": "sun1",
-     "hOffset": 250,
-     "vOffset": 250,
-     "alignment": "center"
-   },
-   "text": {
-     "data": "Click Here",
-     "size": 36,
-     "style": "bold",
-     "name": "text1",
-     "hOffset": 250,
-     "vOffset": 100,
-     "alignment": "center",
-     "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
-   }
- }
+  "personalInfo": {
+    "email": "newuser@example.com",
+    "firstName": "Sarah",
+    "lastName": "Connor",
+    "dateOfBirth": "1985-07-13",
+    "phoneNumber": "+1-555-0199",
+    "gender": "female",
+    "country": "United States",
+    "state": "California",
+    "city": "Los Angeles",
+    "zipCode": "90210"
+  },
+  "accountDetails": {
+    "username": "sarah_connor_85",
+    "password": "hashedPassword123",
+    "securityQuestion": "What was your first pet's name?",
+    "securityAnswer": "hashedAnswer456"
+  },
+  "preferences": {
+    "language": "en-US",
+    "timezone": "America/Los_Angeles",
+    "newsletter": false,
+    "marketingOptIn": false,
+    "smsNotifications": true,
+    "emailNotifications": true
+  },
+  "verification": {
+    "emailVerified": false,
+    "phoneVerified": false,
+    "verificationToken": "token_abc123xyz789"
+  },
+  "metadata": {
+    "source": "organic",
+    "referrer": null,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "ipAddress": "192.168.1.100",
+    "registeredAt": "2024-01-15T12:00:00Z"
+  },
+  "consent": {
+    "agreeTerms": true,
+    "agreePrivacy": true,
+    "agreeMarketing": false,
+    "consentDate": "2024-01-15T12:00:00Z"
+  }
 }
