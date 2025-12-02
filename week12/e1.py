@@ -1,116 +1,80 @@
 class Animal:
     def __init__(self):
-        self.name = "JUST AN ANIMAL"
-        self.x = 0.0
-        self.y = 0.0
+        self.x=0.0
+        self.y=0.0
+        self.name=""
 
-    def print(self):
-        print(self.name)
+    def run(self):
+        print("rolling really fast")
+
 
 class Cat(Animal):
-    def __init__(self, name):#CONSTRUCTOR
+    def __init__(self, n):
         super().__init__()
-        self.name = name
-        self.numberofclaws = 20
+        self.numberofteeth = 30
 
-    def meow(self):
-        print("meow")
+    def run(self):
+        print("sneaking around fast")
 
-    def __add__(self,other):
-        newname = self.name + "-" + other.name
-        newcat = Cat(newname)
-        newcat.numberofclaws = (self.numberofclaws + other.numberofclaws)/2
-        return newcat
-    
-    def __mul__(self, other):
-        newname = "!!!!!" + self.name + "-" + other.name
-        newcat = Cat(newname)
-        newcat.numberofclaws = (self.numberofclaws * other.numberofclaws)/2
-        return newcat
-    
-    def __lt__(self, other):
-        if self.numberofclaws < other.numberofclaws:
-            return True
-        return False
-    
-    def __str__(self):
-        return f"{self.name} {self.numberofclaws}"
+    def walk(self):
+        print("sneaking around")
 
-class Dog(Animal):
-    def __init__(self):
-        super().__init__()
-        self.name = "STANDARD DOG"
-        self.friendlinesslevel = 5
-        self.numberofteeth = 900
-    #OVERRIDE
-    def print(self):
-        print("HELLO FRIEND MY NAME IS " + self.name)
-
-    #SETTER
-    def set_name(self, name): 
-        self.name = name
+    def eat(self, food):
+        print("meow thanks for the " + food + " just kidding here is a scratch mark!!!!")
+        self.numberofteeth -= 1
 
     #GETTER
-    def get_name(self): 
+    def get_name(self):
         return self.name
+    #SETTER
+    def set_name(self, n):
+        self.name = n
 
-cat1 = Cat("floofi")
-cat2 = Cat("ploopi")
-dog1 = Dog()
-dog2 = Dog()
+    #OPERATOR OVERLOADING
+    def __add__(self, other):
+        newname = self.name + "-_-" + other.name
+        newcat = Cat(newname)
+        newcat.numberofteeth = (self.numberofteeth + other.numberofteeth)/2
+        return newcat
 
-dog1.name = "Toby"#no do not do this
-dog1.set_name("Toby")
-happybirthdaymessage = "Happy birthday " + dog1.get_name()
-
-cat1.print()
-cat2.print()
-dog1.print()
-dog2.print()
-
-zoo = [cat1, cat2, dog1, dog2, dog1, dog2, cat1]
-
+    def __lt__(self, other):
+        if self.numberofteeth < other.numberofteeth:
+            return True
+        return False
 
 
+c1 = Cat("pringles")
+c1.walk()
+c1.eat("tuna")
+c2 = Cat("garfield")
 
-
-
-
-
-#polymorphism
-for pet in zoo:
-    pet.print()
-
-
+c3 = c1 + c2
+c3.set_name("garfield jr")
+print(c3.get_name())
+print(c3.numberofteeth)
+c1.x=9
 
 
 
 
 
 
+
+
+
+
+
+name = [""]*100
+balance = [0]*100
 
 class Person:
     def __init__(self):
-        self.name = ""
-        self.id = 0
-        self.balance = 0
+        name = ""
+        balance = 0
 
 
 
-
-
-
-
-
-
-
-
-zoo = []
-zoo.append(Cat("mrclaws"))
-zoo.append(Dog())
-zoo.append(Animal())
-zoo.append(Dog())
-zoo.append(Cat("thepunisher"))
+people = [Person()]*100
 
 
 
@@ -124,9 +88,6 @@ zoo.append(Cat("thepunisher"))
 
 
 
-print("------------------------------")
-for pet in zoo:
-    pet.print()
 
 
 
@@ -135,20 +96,13 @@ for pet in zoo:
 
 
 
-print("----------------------")
-toby = Cat("toby")
-pringles = Cat("pringles")
 
-cat1 = toby + pringles
-cat2 = toby * pringles
-cat3 = (cat1 + cat2) * cat1
 
-print(cat1.name, cat1.numberofclaws)
-print(cat2.name, cat2.numberofclaws)
-print(cat3.name, cat3.numberofclaws)
 
-print("------------------")
-cats = [cat2,cat3,cat1,toby,pringles]
-cats.sort()
-for c in cats:
-    print(c)
+
+
+
+
+
+floofi = Cat("floofi")
+floofi.run()
