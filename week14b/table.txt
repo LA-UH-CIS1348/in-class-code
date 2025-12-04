@@ -1,0 +1,6 @@
+name	age	balance
+alice	1	194
+bob	2	45
+joe	3	34
+mary	4	23
+john	5	2
